@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <VButton type="primary">test</VButton>
+    <VButton type="primary" @click="fetchData()">test</VButton>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -32,12 +32,22 @@ export default {
   },
   components:{
     VButton: Button
+  },
+  methods:{
+    fetchData(){
+      fetch('http://www.fushengshe.com/Market/public/index.php/Index/Index/login_test',{
+        method: 'POST',
+      }).then((res) => res.json())
+        .then((json) => {
+          console.log(json)
+        })
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="stylus" scoped>
 h1, h2 {
   font-weight: normal;
 }
