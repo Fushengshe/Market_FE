@@ -37,6 +37,13 @@ export default {
     fetchData(){
       fetch('http://www.fushengshe.com/Market/public/index.php/Index/Index/login_test',{
         method: 'POST',
+          headers:{
+
+          },
+          body: JSON.stringify({
+              mobile: '111111',
+              password: '1111'
+          })
       }).then((res) => res.json())
         .then((json) => {
           console.log(json)
@@ -44,6 +51,8 @@ export default {
     }
   }
 }
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
