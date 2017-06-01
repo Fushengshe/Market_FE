@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import{Button} from 'element-ui'
+  import {Button} from 'element-ui'
 export default {
   name: 'hello',
   data () {
