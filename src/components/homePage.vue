@@ -1,60 +1,60 @@
 <template>
   <div class = "homePage">
-    <div class="page-tabbar">
-       <div class="page-wrap">
-         <mt-tab-container class="page-tabbar-container" v-model="selected">
-           <mt-tab-container-item id="首页">
-            <mt-search v-model="search"></mt-search>
-            <mt-swipe>
-              <mt-swipe-item>1</mt-swipe-item>
-              <mt-swipe-item>2</mt-swipe-item>
-              <mt-swipe-item>3</mt-swipe-item>
-            </mt-swipe>
-           </mt-tab-container-item>
-           <mt-tab-container-item id="发现">
-             <mt-cell v-for="n in 5" :title="'订单 ' + n" />
-           </mt-tab-container-item>
-           <mt-tab-container-item id="购物车">
-             <mt-cell v-for="n in 7" :title="'发现 ' + n" />
-           </mt-tab-container-item>
-           <mt-tab-container-item id="我的">
-             <div class="page-part">
-               <mt-cell v-for="n in 12" :title="'我的 ' + n" />
-             </div>
-             <router-link to="/">
-               <mt-button type="danger" size="large">退出</mt-button>
-             </router-link>
-           </mt-tab-container-item>
-         </mt-tab-container>
-       </div>
+     <div class="page-wrap">
+       <mt-tab-container class="page-tabbar-container" v-model="selected">
+         <mt-tab-container-item id="首页">
+          <Home></Home>
+         </mt-tab-container-item>
 
-       <mt-tabbar v-model="selected" fixed>
-         <mt-tab-item id="首页">
-           <img slot="icon" src="#">
-           首页
-         </mt-tab-item>
-         <mt-tab-item id="发现">
-           <img slot="icon" src="#">
-           发现
-         </mt-tab-item>
-         <mt-tab-item id="购物车">
-           <img slot="icon" src="#">
-           购物车
-         </mt-tab-item>
-         <mt-tab-item id="我的">
-           <img slot="icon" src="#">
-           我的
-         </mt-tab-item>
-       </mt-tabbar>
+         <mt-tab-container-item id="发现">
+           <mt-cell v-for="n in 5" :title="'订单 ' + n" />
+         </mt-tab-container-item>
+
+         <mt-tab-container-item id="购物车">
+           <Cart></Cart>
+         </mt-tab-container-item>
+
+         <mt-tab-container-item id="我的">
+           <Mine></Mine>
+         </mt-tab-container-item>
+       </mt-tab-container>
      </div>
-   </div>
+
+
+
+     <mt-tabbar v-model="selected" fixed>
+       <mt-tab-item id="首页">
+         <img slot="icon" src="../assets/home.png">
+         首页
+       </mt-tab-item>
+
+       <mt-tab-item id="发现">
+         <img slot="icon" src="../assets/find.png">
+         发现
+       </mt-tab-item>
+
+       <mt-tab-item id="购物车">
+         <img slot="icon" src="../assets/cart.png">
+         购物车
+       </mt-tab-item>
+
+       <mt-tab-item id="我的">
+         <img slot="icon" src="../assets/mine.png">
+         我的
+       </mt-tab-item>
+     </mt-tabbar>
+
+ </div>
 </template>
 
 <script>
-import { Tabbar, TabItem } from 'mint-ui';
-import { TabContainer, TabContainerItem } from 'mint-ui';
-import { Search } from 'mint-ui';
-import { Swipe, SwipeItem } from 'mint-ui';
+import Mine from './mine'
+import Home from './home'
+import Cart from './cart'
+import ProductInfo from './productInfo'
+
+import { Tabbar, TabItem, TabContainer, TabContainerItem } from 'mint-ui';
+
 
 export default {
   name: 'homePage',
@@ -62,18 +62,17 @@ export default {
     return {
       active: 'tab-container1',
       selected: '首页',
-      search: '',
-      auto: 4000
     }
   },
   components:{
+    Mine,
+    Home,
+    Cart,
+    ProductInfo,
     Tabbar: Tabbar,
     TabItem: TabItem,
     TabContainer: TabContainer,
     TabContainerItem: TabContainerItem,
-    Search: Search,
-    Swipe: Swipe,
-    SwipeItem: SwipeItem
   }
 }
 
@@ -90,5 +89,6 @@ export default {
     height:100%;
     width:100%;
   }
+
 
 </style>
