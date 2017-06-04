@@ -17,7 +17,7 @@
 
     <div class = "btn">
       <mt-button type="default" class = "btnAdd">加入购物车</mt-button>
-      <mt-button type="default" class = "btnChan">立即交换</mt-button>
+      <mt-button type="default" class = "btnChan">立即购买</mt-button>
     </div>
 
   </div>

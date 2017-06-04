@@ -7,7 +7,8 @@
          </mt-tab-container-item>
 
          <mt-tab-container-item id="发现">
-           <mt-cell v-for="n in 5" :title="'订单 ' + n" />
+           <!-- <ProductInfo></ProductInfo> -->
+           <!-- <Confirmation></Confirmation> -->
          </mt-tab-container-item>
 
          <mt-tab-container-item id="购物车">
@@ -16,6 +17,9 @@
 
          <mt-tab-container-item id="我的">
            <Mine></Mine>
+           <!-- <Login></Login> -->
+           <!-- <ProductInfo></ProductInfo> -->
+           <!-- <Confirmation></Confirmation> -->
          </mt-tab-container-item>
        </mt-tab-container>
      </div>
@@ -51,9 +55,11 @@
 import Mine from './mine'
 import Home from './home'
 import Cart from './cart'
+import Confirmation from './confirmation'
 import ProductInfo from './productInfo'
+import Login from './Login'
 
-import { Tabbar, TabItem, TabContainer, TabContainerItem } from 'mint-ui';
+import { Tabbar, TabItem, TabContainer, TabContainerItem} from 'mint-ui';
 
 
 export default {
@@ -68,7 +74,9 @@ export default {
     Mine,
     Home,
     Cart,
+    Confirmation,
     ProductInfo,
+    Login,
     Tabbar: Tabbar,
     TabItem: TabItem,
     TabContainer: TabContainer,
