@@ -1,27 +1,27 @@
 <template>
   <div class = "Mine">
     <div class = "avatar">
-      <img src = "#" />
+      <img src = "../assets/touxiang.jpg" />
     </div>
 
     <div class = "main">
       <mt-cell title="个人资料" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/material.png" width="24" height="24">
       </mt-cell>
       <mt-cell title="我的物品" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/artical.png" width="24" height="24">
       </mt-cell>
-      <mt-cell title="我的交换" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+      <mt-cell title="我的小票" to="#" is-link>
+        <img slot="icon" src="../assets/receipt.png" width="24" height="24">
       </mt-cell>
       <mt-cell title="客服中心" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/service.png" width="24" height="24">
       </mt-cell>
       <mt-cell title="设置" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/setting.png" width="24" height="24">
       </mt-cell>
       <mt-cell title="退出" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/exit.png" width="24" height="24">
       </mt-cell>
     </div>
    </div>

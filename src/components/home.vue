@@ -4,9 +4,9 @@
 
     <div class = "swipe">
       <mt-swipe :auto = "4000">
-        <mt-swipe-item>12312313</mt-swipe-item>
-        <mt-swipe-item>2</mt-swipe-item>
-        <mt-swipe-item>3</mt-swipe-item>
+        <mt-swipe-item><img src = "../assets/swipe1.jpg"/></mt-swipe-item>
+        <mt-swipe-item><img src = "../assets/swipe2.jpg"/></mt-swipe-item>
+        <mt-swipe-item><img src = "../assets/swipe3.jpg"/></mt-swipe-item>
       </mt-swipe>
     </div>
 
@@ -27,11 +27,11 @@
 
     <div class = "recom">
       <div class = "recomL">
-
+        <img src = "../assets/L.png"/>
       </div>
 
       <div class = "recomR">
-
+        <img src = "../assets/R.jpg"/>
       </div>
     </div>
   </div>
@@ -83,6 +83,11 @@ export default {
     background-color:#888;
   }
 
+  .swipe img{
+    height:100%;
+    width:100%;
+  }
+
   .infoCell{
     width:100%;
     position:absolute;
@@ -98,6 +103,11 @@ export default {
     position:absolute;
     top:calc((3rem + 27vh) + (48px * 4));
     z-index:1
+  }
+
+  .recom img{
+    width:100%;
+    height:100%;
   }
 
   .recomL{

@@ -2,16 +2,16 @@
   <div class = "cart">
     <div class = "commodity">
       <mt-cell-swipe title="华为p9" to="#productInfo" is-link :right = "btn">
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/pack.png" width="24" height="24">
       </mt-cell-swipe>
       <mt-cell-swipe title="iphone7" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/pack.png" width="24" height="24">
       </mt-cell-swipe>
       <mt-cell-swipe title="小米6" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/pack.png" width="24" height="24">
       </mt-cell-swipe>
       <mt-cell-swipe title="macbook" to="#" is-link>
-        <img slot="icon" src="#" width="24" height="24">
+        <img slot="icon" src="../assets/pack.png" width="24" height="24">
       </mt-cell-swipe>
     </div>
 
@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       btn:[{
-        content: '交换',
+        content: '购买',
         style: { background:'#blue', color: '#fff'},
         // handler:()
       }]
