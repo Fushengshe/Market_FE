@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
+// import map
+import AMap from 'vue-amap'
 Vue.config.productionTip = false
 Vue.use(Mint)
-
+Vue.use(AMap)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
